@@ -1,0 +1,43 @@
+:root {
+	/* light theme tokens */
+	--background-primary-light: #88a093;
+	--background-secondary-light: #698174;
+
+	--color-primary-light: #fff;
+	--color-secondary-light: #d6e8de;
+
+	--button-background-light: #c9c9c9;
+	--button-color-light: #698174;
+
+	/* dark theme tokens */
+	--background-primary-dark: #1f2a26;
+	--background-secondary-dark: #2d3a34;  
+	
+	--color-primary-dark: #dbeadf;        
+	--color-secondary-dark: #a9c2b7;     
+	
+	--button-background-dark: #444d48;
+	--button-color-dark: #a9c2b7;
+}
+
+[data-theme='light'] {
+	--background-primary: var(--background-primary-light);
+	--background-secondary: var(--background-secondary-light);
+
+	--color-primary: var(--color-primary-light);
+	--color-secondary: var(--color-secondary-light);
+
+	--button-background: var(--button-background-light);
+	--button-color: var(--button-color-light);
+}
+
+[data-theme='dark'] {
+	--background-primary: var(--background-primary-dark);
+	--background-secondary: var(--background-secondary-dark);
+
+	--color-primary: var(--color-primary-dark);
+	--color-secondary: var(--color-secondary-dark);
+
+	--button-background: var(--button-background-dark);
+	--button-color: var(--button-color-dark);
+}
