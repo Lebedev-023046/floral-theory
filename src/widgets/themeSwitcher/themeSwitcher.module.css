@@ -1,0 +1,10 @@
+.themeSwitcherButton {
+	max-width: 2rem;
+	max-height: 2rem;
+}
+
+.themeSwitcherImage {
+	max-width: inherit;
+	max-height: inherit;
+	fill: green;
+}

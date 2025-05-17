@@ -1,0 +1,41 @@
+.heroWrapper {
+	height: 100dvh;
+	/* height: 100%; */
+	width: 50%;
+	margin-left: auto;
+	background-color: var(--background-primary);
+}
+
+.heroTitle {
+	position: absolute;
+	top: 50%;
+	width: 45%;
+	max-width: 700px;
+	min-width: 500px;
+	left: 49.5%;
+	line-height: 70%;
+	transform: translate(-50%, -50%) rotate(270deg);
+	font-size: 8rem;
+	font-family: 'Gagalin';
+}
+
+.heroTitle span {
+	display: block;
+	color: var(--background-primary);
+}
+
+.heroTitle span:last-child {
+	color: var(--color-primary);
+	text-align: right;
+}
+
+.heroFlowers {
+	position: absolute;
+	/* z-index: 0; */
+	bottom: 0;
+	right: 0;
+	width: 45%;
+	height: auto;
+	object-fit: cover;
+	object-position: center;
+}

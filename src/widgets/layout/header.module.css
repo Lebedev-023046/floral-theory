@@ -1,0 +1,5 @@
+.layoutWrapper {
+	width: 100%;
+	height: auto;
+	background-color: var(--color-primary);
+}
