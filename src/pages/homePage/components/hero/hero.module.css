@@ -1,6 +1,10 @@
 .heroWrapper {
 	height: 100dvh;
-	/* height: 100%; */
+	width: 100%;
+}
+
+.heroContainer {
+	height: 100%;
 	width: 50%;
 	margin-left: auto;
 	background-color: var(--background-primary);

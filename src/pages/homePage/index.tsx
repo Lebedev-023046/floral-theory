@@ -1,8 +1,8 @@
 import React from 'react'
 import { useThemeCtx } from '../../app/providers/themeProvider'
-import { Button } from '../../shared/ui/button'
-import styles from './homePage.module.css'
 import { Hero } from './components/hero'
+import { Sales } from './components/sales'
+import styles from './homePage.module.css'
 
 export const HomePage = () => {
 	const { toggleTheme } = useThemeCtx()
@@ -10,6 +10,7 @@ export const HomePage = () => {
 	return (
 		<div className={styles.homePageWrapper}>
 			<Hero />
+			<Sales />
 			{/* <Button onClick={toggleTheme}>Hey!</Button> */}
 		</div>
 	)
