@@ -1,6 +1,8 @@
 :root {
 	/* light theme tokens */
 	--background-primary-light: #88a093;
+
+	--background-secondary-light-rgb: 105, 129, 116;
 	--background-secondary-light: #698174;
 
 	--color-primary-light: #fff;
@@ -9,19 +11,27 @@
 	--button-background-light: #c9c9c9;
 	--button-color-light: #698174;
 
+	--title-color-light: #6a6a6a;
+
 	/* dark theme tokens */
 	--background-primary-dark: #1f2a26;
-	--background-secondary-dark: #2d3a34;  
-	
-	--color-primary-dark: #dbeadf;        
-	--color-secondary-dark: #a9c2b7;     
-	
+
+	--background-secondary-dark-rgb: 45, 58, 52;
+	--background-secondary-dark: #2d3a34;
+
+	--color-primary-dark: #dbeadf;
+	--color-secondary-dark: #a9c2b7;
+
 	--button-background-dark: #444d48;
 	--button-color-dark: #a9c2b7;
+
+	--title-color-dark: #5a5a5a;
 }
 
 [data-theme='light'] {
 	--background-primary: var(--background-primary-light);
+
+	--background-secondary-rgb: var(--background-secondary-light-rgb);
 	--background-secondary: var(--background-secondary-light);
 
 	--color-primary: var(--color-primary-light);
@@ -29,10 +39,14 @@
 
 	--button-background: var(--button-background-light);
 	--button-color: var(--button-color-light);
+
+	--title-color: var(--title-color-light);
 }
 
 [data-theme='dark'] {
 	--background-primary: var(--background-primary-dark);
+
+	--background-secondary-rgb: var(--background-secondary-dark-rgb);
 	--background-secondary: var(--background-secondary-dark);
 
 	--color-primary: var(--color-primary-dark);
@@ -40,4 +54,6 @@
 
 	--button-background: var(--button-background-dark);
 	--button-color: var(--button-color-dark);
+
+	--title-color: var(--title-color-dark);
 }

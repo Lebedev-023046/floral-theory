@@ -10,6 +10,7 @@ body {
 	font-family: 'Russo One', sans-serif;
 	font-weight: 400;
 	font-style: normal;
+	scroll-behavior: smooth;
 	background-color: var(--color-primary);
 }
 
@@ -20,6 +21,24 @@ body {
 @font-face {
 	font-family: 'Gagalin';
 	src: local('Gagalin-Regular'), url('../shared/fonts/Gagalin-Regular.otf') format('truetype');
+}
+
+.splide__arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 3rem;
+	height: 3rem;
+	font-size: 2rem;
+	padding: 12px;
+}
+
+.splide__arrow--prev {
+	left: -5rem;
+}
+
+.splide__arrow--next {
+	right: -5rem;
 }
 
 a {
@@ -35,5 +54,5 @@ button {
 	cursor: pointer;
 	outline: none;
 	border: none;
-	/* background-color: transparent; */
+	background-color: transparent;
 }

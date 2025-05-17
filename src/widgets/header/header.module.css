@@ -1,5 +1,5 @@
 .header {
-	position: absolute;
+	position: fixed;
 	z-index: 10;
 	top: 0;
 	width: 100%;
@@ -31,7 +31,8 @@
 	background-color: transparent;
 }
 
-.profileImage {
+.profileImage,
+.cartImage {
 	object-fit: contain;
 	max-width: inherit;
 	max-height: inherit;

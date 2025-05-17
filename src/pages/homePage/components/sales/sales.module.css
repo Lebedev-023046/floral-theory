@@ -1,4 +1,6 @@
 .salesWrapper {
-	height: 300px;
-	background-color: red;
+	padding: 5.5rem 4.5rem 0;
+}
+.sliderWrapper {
+	margin: 6.25rem;
 }

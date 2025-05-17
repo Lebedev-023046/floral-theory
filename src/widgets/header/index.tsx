@@ -29,14 +29,14 @@ export function Header() {
 						</Link>
 					</li>
 					<li className={styles.navListItem}>
-						<Link className={styles.navListLink} to='/#about'>
+						<a className={styles.navListLink} href='/#about'>
 							о нас
-						</Link>
+						</a>
 					</li>
 					<li className={styles.navListItem}>
-						<Link className={styles.navListLink} to='/#sales'>
+						<a className={styles.navListLink} href='/#sales'>
 							акции
-						</Link>
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -44,7 +44,7 @@ export function Header() {
 			<div className={styles.menu}>
 				<ThemeSwitcher />
 				<button>
-					<img className={styles.profileImage} src={Cart} alt='cart' />
+					<img className={styles.cartImage} src={Cart} alt='cart' />
 				</button>
 				<button>
 					<img className={styles.profileImage} src={Profile} alt='profile' />
