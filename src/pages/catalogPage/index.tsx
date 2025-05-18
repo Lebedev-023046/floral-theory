@@ -11,8 +11,16 @@ export const CatalogPage = () => {
 	const { resetFilters } = useFiltersCtx()
 
 	useEffect(() => {
+		const body = document.querySelector('body')
+		if (body) {
+			body.style.overflow = 'hidden'
+		}
+
 		return () => {
 			resetFilters()
+			if (body) {
+				body.style.overflow = 'auto'
+			}
 		}
 	}, [])
 

@@ -1,5 +1,5 @@
 export interface Bouquet {
-	id: number
+	id: string
 	name: string
 	price: number
 	currency: string

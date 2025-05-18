@@ -23,6 +23,7 @@ export function Sales() {
 					{bouquetsForSale.map(bouquet => (
 						<SplideSlide key={bouquet.id}>
 							<CatalogCard
+								id={bouquet.id}
 								title={bouquet.name}
 								image={bouquet.image}
 								price={bouquet.price}

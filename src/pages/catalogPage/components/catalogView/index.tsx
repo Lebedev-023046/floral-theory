@@ -18,6 +18,7 @@ export function CatalogView() {
 					{filteredBouquets.map(bouquet => (
 						<CatalogCard
 							key={bouquet.id}
+							id={bouquet.id}
 							title={bouquet.name}
 							image={bouquet.image}
 							price={bouquet.price}

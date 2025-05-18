@@ -14,7 +14,6 @@
 	font-size: inherit;
 	font-family: inherit;
 	cursor: pointer;
-
 	min-width: fit-content;
 }
 
@@ -24,6 +23,6 @@
 }
 
 .secondary {
-	color: var(--button-secondary-color);
+	color: var(--color-primary);
 	background-color: var(--background-secondary);
 }
