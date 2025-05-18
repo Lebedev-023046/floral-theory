@@ -3,8 +3,8 @@ import styles from './title.module.css'
 
 interface Props {
 	as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-	variant: 'primary' | 'secondary'
-	size: 's' | 'm' | 'l'
+	variant?: 'primary' | 'secondary'
+	size?: 's' | 'm' | 'l'
 	children: React.ReactNode
 }
 
