@@ -1,5 +1,5 @@
 .header {
-	position: fixed;
+	position: absolute;
 	z-index: 10;
 	top: 0;
 	width: 100%;
@@ -7,6 +7,24 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.5rem 3rem;
+}
+
+.header:after {
+	display: none;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50.5%;
+	height: 100%;
+	border-top-left-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+	background-color: var(--background-primary);
+	z-index: -1;
+}
+
+.header.hasRightBg::after {
+	display: block;
 }
 
 .navList {

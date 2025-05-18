@@ -5,15 +5,16 @@ import styles from './catalogCard.module.css'
 
 interface Props {
 	title: string
+	image: string
 	price: number
 	currency: string
 	rating: number
 }
 
-export function CatalogCard({ title, price, currency, rating }: Props) {
+export function CatalogCard({ title, image, price, currency, rating }: Props) {
 	return (
 		<div className={styles.wrapper}>
-			<img className={styles.image} src={Temp} alt='flower' />
+			<img className={styles.image} src={image} alt='flower' />
 			<div className={styles.content}>
 				<div className={styles.title}>{title}</div>
 				<div className={styles.price}>

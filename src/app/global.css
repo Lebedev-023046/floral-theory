@@ -18,6 +18,17 @@ body {
 	height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+}
+
 @font-face {
 	font-family: 'Gagalin';
 	src: local('Gagalin-Regular'), url('../shared/fonts/Gagalin-Regular.otf') format('truetype');

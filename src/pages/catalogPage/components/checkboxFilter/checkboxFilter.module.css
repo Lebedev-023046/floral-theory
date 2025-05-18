@@ -1,0 +1,14 @@
+.input {
+	width: 1.1rem;
+	height: 1.1rem;
+	aspect-ratio: 1;
+	background-color: var(--color-secondary);
+	accent-color: var(--background-secondary);
+}
+
+.label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.1rem;
+}

@@ -3,9 +3,14 @@ import styles from './title.module.css'
 
 interface Props {
 	as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+	variant: 'primary' | 'secondary'
+	size: 's' | 'm' | 'l'
 	children: React.ReactNode
 }
 
-export function Title({ as: As, children }: Props) {
-	return <As className={styles.title}>{children}</As>
+export function Title({ as: As = 'h1', variant = 'primary', size = 'm', children }: Props) {
+	const variantClass = variant === 'primary' ? styles.primary : styles.secondary
+	const sizeClass = size === 's' ? styles.s : size === 'm' ? styles.m : styles.l
+
+	return <As className={`${styles.title} ${variantClass} ${sizeClass}`}>{children}</As>
 }

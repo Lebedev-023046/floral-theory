@@ -2,18 +2,17 @@ import React from 'react'
 import { useThemeCtx } from '../../app/providers/themeProvider'
 import { Hero } from './components/hero'
 import { Sales } from './components/sales'
-import styles from './homePage.module.css'
 import { About } from './components/about'
 
-export const HomePage = () => {
-	const { toggleTheme } = useThemeCtx()
+import styles from './homePage.module.css'
+import { useFiltersCtx } from '../../app/providers/filterProvider'
 
+export const HomePage = () => {
 	return (
-		<div className={styles.homePageWrapper}>
+		<main className={styles.homePageWrapper}>
 			<Hero />
 			<Sales />
 			<About />
-			{/* <Button onClick={toggleTheme}>Hey!</Button> */}
-		</div>
+		</main>
 	)
 }

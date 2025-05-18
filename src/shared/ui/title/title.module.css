@@ -5,3 +5,23 @@
 
 	color: var(--title-color);
 }
+
+.primary {
+	color: var(--title-color);
+}
+
+.secondary {
+	color: var(--color-primary);
+}
+
+.s {
+	font-size: 3rem;
+}
+
+.m {
+	font-size: 4rem;
+}
+
+.l {
+	font-size: 4.375rem;
+}

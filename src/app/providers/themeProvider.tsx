@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, PropsWithChildren } from 'react'
 
 const StorageKey = 'theme-color'
 
@@ -35,7 +35,7 @@ export const getTheme = (): Theme => {
 	return theme
 }
 
-export const Theme = ({ children }) => {
+export const Theme = ({ children }: PropsWithChildren) => {
 	const [theme, setTheme] = useState(getTheme)
 
 	const toggleTheme = () => {

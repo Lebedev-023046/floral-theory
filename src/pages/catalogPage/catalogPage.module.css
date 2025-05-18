@@ -1,0 +1,17 @@
+.catalogPageWrapper {
+	padding-top: 13rem;
+}
+
+.container {
+	display: flex;
+	gap: 2rem;
+}
+
+.sidebar {
+	padding: 2rem;
+	max-width: 360px;
+	height: auto;
+	border-top-right-radius: 2rem;
+	color: var(--color-primary);
+	background-color: var(--background-primary);
+}
