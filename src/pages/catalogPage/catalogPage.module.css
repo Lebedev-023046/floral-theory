@@ -1,16 +1,20 @@
 .catalogPageWrapper {
+	height: 100%;
+
 	padding-top: 13rem;
 }
 
 .container {
 	display: flex;
 	gap: 2rem;
+	height: 100%;
 }
 
 .sidebar {
 	padding: 2rem;
-	max-width: 360px;
-	height: auto;
+	width: 25%;
+	height: 100%;
+	overflow-y: auto;
 	border-top-right-radius: 2rem;
 	color: var(--color-primary);
 	background-color: var(--background-primary);

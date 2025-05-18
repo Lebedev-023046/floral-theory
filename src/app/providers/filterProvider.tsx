@@ -21,6 +21,7 @@ const defaultFilters: FiltersState = {
 type FilterContextType = {
 	filters: FiltersState
 	setFilters: React.Dispatch<React.SetStateAction<FiltersState>>
+	resetFilters: () => void
 }
 
 const FilterContext = createContext<FilterContextType | undefined>(undefined)
@@ -28,7 +29,11 @@ const FilterContext = createContext<FilterContextType | undefined>(undefined)
 export const FilterProvider = ({ children }: PropsWithChildren) => {
 	const [filters, setFilters] = useState<FiltersState>(defaultFilters)
 
-	return <FilterContext.Provider value={{ filters, setFilters }}>{children}</FilterContext.Provider>
+	const resetFilters = () => {
+		setFilters(defaultFilters)
+	}
+
+	return <FilterContext.Provider value={{ filters, setFilters, resetFilters }}>{children}</FilterContext.Provider>
 }
 
 export const useFiltersCtx = (): FilterContextType => {

@@ -1,9 +1,11 @@
-import { useGetBouquets } from '../../../../features/catalog/model/useGetBouquets'
+import { useBouquetsCtx } from '../../../../app/providers/BouquetProvider'
+import { useFilteredBouquets } from '../../../../features/catalog/model/useFilteredBouquets'
 import { CatalogCard } from '../../../../features/catalog/ui/catalogCard'
 import styles from './catalogView.module.css'
 
 export function CatalogView() {
-	const { bouquets, loading, isError } = useGetBouquets()
+	const { bouquets, loading, isError } = useBouquetsCtx()
+	const filteredBouquets = useFilteredBouquets(bouquets)
 
 	return (
 		<section className={styles.content}>
@@ -13,7 +15,7 @@ export function CatalogView() {
 				<p>Error</p>
 			) : (
 				<>
-					{bouquets.map(bouquet => (
+					{filteredBouquets.map(bouquet => (
 						<CatalogCard
 							key={bouquet.id}
 							title={bouquet.name}

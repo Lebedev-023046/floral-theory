@@ -4,8 +4,18 @@ import { CatalogView } from './components/catalogView'
 import { FiltersView } from './components/filtersView'
 
 import styles from './catalogPage.module.css'
+import { useEffect } from 'react'
+import { useFiltersCtx } from '../../app/providers/filterProvider'
 
 export const CatalogPage = () => {
+	const { resetFilters } = useFiltersCtx()
+
+	useEffect(() => {
+		return () => {
+			resetFilters()
+		}
+	}, [])
+
 	return (
 		<main className={styles.catalogPageWrapper}>
 			<div className={styles.container}>

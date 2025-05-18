@@ -17,3 +17,13 @@
 
 	min-width: fit-content;
 }
+
+.primary {
+	color: var(--button-color);
+	background-color: var(--button-background);
+}
+
+.secondary {
+	color: var(--button-secondary-color);
+	background-color: var(--background-secondary);
+}
