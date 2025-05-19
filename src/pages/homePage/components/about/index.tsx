@@ -7,7 +7,7 @@ import styles from './about.module.css'
 
 export function About() {
 	return (
-		<section className={styles.aboutWrapper}>
+		<section id='about' className={styles.aboutWrapper}>
 			<Title as='h1'>О нас</Title>
 			<div className={styles.infoContainer}>
 				<div className={styles.infoBlock}>
