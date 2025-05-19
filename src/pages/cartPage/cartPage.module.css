@@ -1,5 +1,7 @@
 .cartWrapper {
 	padding: 13rem 2rem;
+	min-height: 100vh;
+	position: relative;
 }
 
 .container {

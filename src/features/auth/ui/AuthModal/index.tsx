@@ -3,7 +3,7 @@ import { Modal } from '../../../../shared/ui/modal'
 import { Input } from '../../../../shared/ui/input'
 import { Link } from 'react-router-dom'
 import styles from './AuthModal.module.css'
-import { useValidate } from './useValidate'
+import { useValidate } from '../../model/useValidate'
 
 // const phonePattern = '\+375\s?\(?\d{2}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}'
 

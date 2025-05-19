@@ -1,4 +1,6 @@
 .modalWrapper {
+	position: relative;
+	z-index: 1000;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -10,6 +12,14 @@
 	margin: 0 auto;
 	color: var(--color-primary);
 	background-color: var(--background-secondary);
+}
+
+.overlay {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 .formContainer {
@@ -47,11 +57,20 @@
 }
 
 .buttonContainer {
-	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	gap: 1rem;
 	margin: 0 auto;
 	margin-top: 3.5rem;
 	min-width: 4rem;
 	font-size: 1.5rem;
+}
+
+.buttonContainer button {
+	width: 90%;
 }
 
 .footerText {

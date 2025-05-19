@@ -3,7 +3,7 @@ import styles from './input.module.css'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string
-	error: string
+	error?: string
 	children?: ReactNode
 }
 

@@ -1,14 +1,25 @@
+import { useState } from 'react'
 import { useBouquetsCtx } from '../../app/providers/BouquetProvider'
 import { useCartCtx } from '../../app/providers/cartProvider'
 import { CatalogCard } from '../../features/catalog/ui/catalogCard'
 import { Title } from '../../shared/ui/title'
 import styles from './cartPage.module.css'
+import { OrderModal } from '../../features/order/ui/orderModal'
 
 export function CartPage() {
 	const { bouquets } = useBouquetsCtx()
 	const bouquet = bouquets[0]
 
 	const { cart, removeFromCart } = useCartCtx()
+	const [isOrderOpen, setIsOrderOpen] = useState<boolean>(false)
+
+	const handleOrder = () => {
+		setIsOrderOpen(true)
+	}
+
+	const handleClose = () => {
+		setIsOrderOpen(false)
+	}
 
 	if (cart.length === 0) {
 		return (
@@ -41,7 +52,9 @@ export function CartPage() {
 										{bouquet.price} {bouquet.currency}
 									</span>
 									<div className={styles.actions}>
-										<button className={styles.order}>заказать</button>
+										<button className={styles.order} onClick={handleOrder}>
+											заказать
+										</button>
 										<button className={styles.delete} onClick={() => removeFromCart(bouquet.id)}>
 											удалить
 										</button>
@@ -52,6 +65,7 @@ export function CartPage() {
 					))}
 				</div>
 			</div>
+			{isOrderOpen && <OrderModal onClose={handleClose} />}
 		</div>
 	)
 }
