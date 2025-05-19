@@ -15,6 +15,7 @@ export function CatalogItemPage() {
 	const bouquet = bouquets.find(bouquet => bouquet.id === id)
 
 	if (!bouquet) {
+		alert('Товар не найден')
 		return <Navigate to={ROUTES.catalog} />
 	}
 
