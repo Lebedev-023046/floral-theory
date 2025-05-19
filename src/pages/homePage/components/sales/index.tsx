@@ -22,14 +22,7 @@ export function Sales() {
 				<Splide options={{ rewind: true, perPage: 3, gap: '4.25rem', pagination: false }}>
 					{bouquetsForSale.map(bouquet => (
 						<SplideSlide key={bouquet.id}>
-							<CatalogCard
-								id={bouquet.id}
-								title={bouquet.name}
-								image={bouquet.image}
-								price={bouquet.price}
-								currency={bouquet.currency}
-								rating={bouquet.rating}
-							/>
+							<CatalogCard {...bouquet} />
 						</SplideSlide>
 					))}
 				</Splide>

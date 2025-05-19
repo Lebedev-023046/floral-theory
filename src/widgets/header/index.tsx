@@ -11,10 +11,13 @@ import { getTheme } from '../../app/providers/themeProvider'
 import { ThemeSwitcher } from '../themeSwitcher'
 
 import styles from './header.module.css'
+import { useCartCtx } from '../../app/providers/cartProvider'
 
 export function Header() {
 	const { pathname } = useLocation()
 	const isMainPage = pathname === '/'
+
+	const { cart } = useCartCtx()
 
 	return (
 		<header className={`${styles.header} ${pathname !== '/' ? styles.hasRightBg : ''}`}>
@@ -47,7 +50,10 @@ export function Header() {
 			<div className={styles.menu}>
 				<ThemeSwitcher />
 				<button>
-					<img className={styles.cartImage} src={Cart} alt='cart' />
+					<Link to={ROUTES.cart}>
+						<span className={styles.cartCounter}>{cart.length}</span>
+						<img className={styles.cartImage} src={Cart} alt='cart' />
+					</Link>
 				</button>
 				<button>
 					<img className={styles.profileImage} src={Profile} alt='profile' />

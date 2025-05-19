@@ -6,6 +6,7 @@ import { HomePage } from '../pages/homePage'
 import { CatalogPage } from '../pages/catalogPage'
 import { CatalogItemPage } from '../pages/cataogItemPage'
 import { Layout } from '../widgets/layout'
+import { CartPage } from '../pages/cartPage'
 
 export const AppRouter = () => {
 	return (
@@ -17,6 +18,7 @@ export const AppRouter = () => {
 					<Route path={ROUTES.main} element={<HomePage />} />
 					<Route path={ROUTES.catalog} element={<CatalogPage />} />
 					<Route path={ROUTES.catalogItem} element={<CatalogItemPage />} />
+					<Route path={ROUTES.cart} element={<CartPage />} />
 				</Route>
 
 				<Route path='*' element={<Navigate to={ROUTES.main} />} />

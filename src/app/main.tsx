@@ -7,14 +7,17 @@ import './global.css'
 import './themes.css'
 import { FilterProvider } from './providers/filterProvider'
 import { BouquetProvider } from './providers/BouquetProvider'
+import { CartProvider } from './providers/cartProvider'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
 	<StrictMode>
 		<Theme>
 			<BouquetProvider>
-				<FilterProvider>
-					<AppRouter />
-				</FilterProvider>
+				<CartProvider>
+					<FilterProvider>
+						<AppRouter />
+					</FilterProvider>
+				</CartProvider>
 			</BouquetProvider>
 		</Theme>
 	</StrictMode>
