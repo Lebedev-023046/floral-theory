@@ -1,7 +1,6 @@
-import React from 'react'
-import styles from './header.module.css'
 import { Header } from '../header'
 import { Outlet } from 'react-router-dom'
+import styles from './header.module.css'
 
 export function Layout() {
 	return (

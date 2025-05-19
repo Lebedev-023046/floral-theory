@@ -55,27 +55,6 @@
 	max-height: 2rem;
 	background-color: transparent;
 }
-.cartCounter {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: -1.7rem;
-	right: -0.45rem;
-	width: 1.4rem;
-	height: 1.4rem;
-	font-size: 0.75rem;
-	color: var(--background-primary);
-	background-color: var(--color-primary);
-	border-radius: 50%;
-}
-
-.profileImage,
-.cartImage {
-	object-fit: contain;
-	max-width: inherit;
-	max-height: inherit;
-}
 
 .navListItem {
 	color: var(--background-primary);

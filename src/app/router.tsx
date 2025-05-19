@@ -5,7 +5,7 @@ import { AuthPage } from '../pages/authPage'
 import { HomePage } from '../pages/homePage'
 import { CatalogPage } from '../pages/catalogPage'
 import { CatalogItemPage } from '../pages/cataogItemPage'
-import { Layout } from '../widgets/layout'
+import { Layout } from '../shared/ui/layout'
 import { CartPage } from '../pages/cartPage'
 
 export const AppRouter = () => {

@@ -8,17 +8,20 @@ import './themes.css'
 import { FilterProvider } from './providers/filterProvider'
 import { BouquetProvider } from './providers/BouquetProvider'
 import { CartProvider } from './providers/cartProvider'
+import { UserProvider } from './providers/userProvider'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
 	<StrictMode>
 		<Theme>
-			<BouquetProvider>
-				<CartProvider>
-					<FilterProvider>
-						<AppRouter />
-					</FilterProvider>
-				</CartProvider>
-			</BouquetProvider>
+			<UserProvider>
+				<BouquetProvider>
+					<CartProvider>
+						<FilterProvider>
+							<AppRouter />
+						</FilterProvider>
+					</CartProvider>
+				</BouquetProvider>
+			</UserProvider>
 		</Theme>
 	</StrictMode>
 )

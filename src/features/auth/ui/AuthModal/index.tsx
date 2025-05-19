@@ -3,6 +3,7 @@ import { Modal } from '../../../../shared/ui/modal'
 import { Input } from '../../../../shared/ui/input'
 import { Link } from 'react-router-dom'
 import styles from './AuthModal.module.css'
+import { useValidate } from './useValidate'
 
 // const phonePattern = '\+375\s?\(?\d{2}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}'
 
@@ -13,7 +14,16 @@ interface AuthModalProps {
 
 export const AuthModal = ({ mode, onSubmit }: AuthModalProps) => {
 	const isLogin = mode === 'login'
+	const { errors, validate } = useValidate({ isLogin })
 
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		const formData = new FormData(e.currentTarget)
+		if (!validate(formData)) {
+			e.preventDefault()
+			return
+		}
+		onSubmit(e)
+	}
 
 	return (
 		<Modal
@@ -22,30 +32,31 @@ export const AuthModal = ({ mode, onSubmit }: AuthModalProps) => {
 			renderFooterText={() =>
 				isLogin ? (
 					<p>
-						Нет аккаунта? <Link className={styles.decor} to='/auth/register'>Зарегистрируйтесь</Link>
+						Нет аккаунта?{' '}
+						<Link className={styles.decor} to='/auth/register'>
+							Зарегистрируйтесь
+						</Link>
 					</p>
 				) : (
 					<p>
-						Уже есть аккаунт? <Link className={styles.decor} to='/auth/login'>Войдите</Link>
+						Уже есть аккаунт?{' '}
+						<Link className={styles.decor} to='/auth/login'>
+							Войдите
+						</Link>
 					</p>
 				)
 			}
-			onSubmit={onSubmit}
+			onSubmit={handleSubmit}
 		>
 			<div className={styles.authFormWrapper}>
-				{isLogin ? (
+				{!isLogin && (
 					<>
-						<Input name='phone' label='Телефон' type="tel" inputMode='tel' autoComplete=""   />
-						<Input name='password' label='пароль' type='password' />
-					</>
-				) : (
-					<>
-						<Input name='name' label='Имя' />
-						<Input name='surname' label='Фамилия' />
-						<Input name='phone' label='Телефон' type="tel" inputMode='tel'/>
-						<Input name='password' label='Пароль' type='password'/>
+						<Input name='name' label='Имя' error={errors.name} />
+						<Input name='surname' label='Фамилия' error={errors.surname} />
 					</>
 				)}
+				<Input name='phone' label='Телефон' type='tel' inputMode='tel' error={errors.phone} />
+				<Input name='password' label='Пароль' type='password' error={errors.password} />
 			</div>
 		</Modal>
 	)
