@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react'
-
-import styles from './rangeFilter.module.css'
 import { useFiltersCtx } from '../../../../app/providers/filterProvider'
 
 interface RangeFilterProps {
@@ -26,10 +23,10 @@ export const RangeFilter = ({ filter }: RangeFilterProps) => {
 	return (
 		<>
 			{filter.options.map(option => (
-				<div key={option.key} className={styles.inputContainer}>
-					<label className={styles.label}>{option.label}</label>
+				<div key={option.key} className='flex items-center gap-4 text-[1.1rem]'>
+					<label className='min-w-[15%]'>{option.label}</label>
 					<input
-						className={styles.input}
+						className='w-full px-2 py-1 rounded border-2 outline-none bg-background-secondary text-color-primary placeholder:text-color-primary'
 						type='number'
 						placeholder={option.placeholder}
 						value={price[option.key]}

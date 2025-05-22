@@ -2,10 +2,8 @@ import { Title } from '../../shared/ui/title'
 
 import { CatalogView } from './components/catalogView'
 import { FiltersView } from './components/filtersView'
-
-import styles from './catalogPage.module.css'
-import { useEffect } from 'react'
 import { useFiltersCtx } from '../../app/providers/filterProvider'
+import { useEffect } from 'react'
 
 export const CatalogPage = () => {
 	const { resetFilters } = useFiltersCtx()
@@ -25,9 +23,9 @@ export const CatalogPage = () => {
 	}, [])
 
 	return (
-		<main className={styles.catalogPageWrapper}>
-			<div className={styles.container}>
-				<aside className={styles.sidebar}>
+		<main className='h-full pt-[13rem]'>
+			<div className='flex gap-8 h-full'>
+				<aside className='p-8 w-1/4 h-full overflow-y-auto rounded-tr-2xl text-[color:var(--color-primary)] bg-[color:var(--background-primary)]'>
 					<header>
 						<Title as='h1' variant='secondary' size='l'>
 							каталог

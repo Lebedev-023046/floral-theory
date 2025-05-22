@@ -1,7 +1,6 @@
-import { Input } from '../../../../shared/ui/input'
-import { Modal } from '../../../../shared/ui/modal'
-import { useValidate } from '../../model/useValidate'
-import styles from './orderModal.module.css'
+import { Input } from '../../../shared/ui/input'
+import { Modal } from '../../../shared/ui/modal'
+import { useValidate } from '../model/useValidate'
 
 interface OrderModalProps {
 	onClose: () => void
@@ -24,16 +23,21 @@ export function OrderModal({ onClose }: OrderModalProps) {
 	}
 
 	return (
-		<div className={styles.orderModalWrapper}>
-			<Modal className={styles.padding} onSubmit={handleSubmit} overlay onClose={onClose}>
+		<div className='p-8 relative z-[100] flex flex-col justify-center items-center -mt-[54rem]'>
+			<Modal className='pt-4 pb-10' onSubmit={handleSubmit} overlay onClose={onClose}>
 				<Input error={errors.name} name='name' label='Имя' />
 				<Input error={errors.phone} name='phone' label='Телефон' />
 				<Input error={errors.address} name='address' label='Адрес доставки' />
-				<div className={styles.selectBlock}>
-					<label htmlFor='payment' className={styles.selectLabel}>
+
+				<div className='my-6 flex flex-col gap-2'>
+					<label htmlFor='payment' className='text-[1.5rem] ml-6 font-bold'>
 						Оплата
 					</label>
-					<select id='payment' name='payment' className={styles.select}>
+					<select
+						id='payment'
+						name='payment'
+						className='px-8 py-3 rounded-[1.5rem] border-none outline-none text-[1.5rem] bg-[var(--color-primary)] text-[var(--background-primary)]'
+					>
 						<option value='' disabled>
 							Выберите
 						</option>
@@ -42,6 +46,7 @@ export function OrderModal({ onClose }: OrderModalProps) {
 						<option value='online'>Онлайн</option>
 					</select>
 				</div>
+
 				<Input name='comment' label='Дополнительно' />
 			</Modal>
 		</div>

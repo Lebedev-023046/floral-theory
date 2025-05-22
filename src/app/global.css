@@ -1,6 +1,6 @@
+@import 'tailwindcss';
+
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -16,17 +16,6 @@ body {
 
 #root {
 	height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-size: inherit;
-	font-weight: inherit;
-	font-style: inherit;
 }
 
 @font-face {
@@ -52,18 +41,6 @@ h6 {
 	right: -5rem;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
 ul {
 	list-style: none;
-}
-
-button {
-	cursor: pointer;
-	outline: none;
-	border: none;
-	background-color: transparent;
 }

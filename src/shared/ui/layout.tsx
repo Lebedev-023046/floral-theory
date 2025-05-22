@@ -1,10 +1,9 @@
-import { Header } from '../header'
+import { Header } from './header'
 import { Outlet } from 'react-router-dom'
-import styles from './header.module.css'
 
 export function Layout() {
 	return (
-		<div className={styles.layoutWrapper}>
+		<div className='flex flex-col min-h-full w-full h-full bg-[var(--color-primary)]'>
 			<Header />
 			<Outlet />
 		</div>

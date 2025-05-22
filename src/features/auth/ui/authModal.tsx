@@ -1,11 +1,7 @@
-import React from 'react'
-import { Modal } from '../../../../shared/ui/modal'
-import { Input } from '../../../../shared/ui/input'
+import { Modal } from '../../../shared/ui/modal'
+import { Input } from '../../../shared/ui/input'
 import { Link } from 'react-router-dom'
-import styles from './AuthModal.module.css'
-import { useValidate } from '../../model/useValidate'
-
-// const phonePattern = '\+375\s?\(?\d{2}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}'
+import { useValidate } from '../model/useValidate'
 
 interface AuthModalProps {
 	mode: 'login' | 'register'
@@ -33,14 +29,14 @@ export const AuthModal = ({ mode, onSubmit }: AuthModalProps) => {
 				isLogin ? (
 					<p>
 						Нет аккаунта?{' '}
-						<Link className={styles.decor} to='/auth/register'>
+						<Link to='/auth/register' className='underline cursor-pointer text-primary'>
 							Зарегистрируйтесь
 						</Link>
 					</p>
 				) : (
 					<p>
 						Уже есть аккаунт?{' '}
-						<Link className={styles.decor} to='/auth/login'>
+						<Link to='/auth/login' className='underline cursor-pointer text-primary'>
 							Войдите
 						</Link>
 					</p>
@@ -48,7 +44,7 @@ export const AuthModal = ({ mode, onSubmit }: AuthModalProps) => {
 			}
 			onSubmit={handleSubmit}
 		>
-			<div className={styles.authFormWrapper}>
+			<div className='w-full'>
 				{!isLogin && (
 					<>
 						<Input name='name' label='Имя' error={errors.name} />

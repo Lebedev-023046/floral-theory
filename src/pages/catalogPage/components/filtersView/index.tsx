@@ -1,11 +1,8 @@
 import { useState } from 'react'
 import { FILTERS } from '../../constants'
 import { FilterRenderer } from '../filterRenderer'
-
-import styles from './filtersView.module.css'
 import { Button } from '../../../../shared/ui/button'
 import { useBouquetsCtx } from '../../../../app/providers/BouquetProvider'
-import { useFilteredBouquets } from '../../../../features/catalog/model/useFilteredBouquets'
 import { useFiltersCtx } from '../../../../app/providers/filterProvider'
 
 export function FiltersView() {
@@ -18,7 +15,7 @@ export function FiltersView() {
 	}
 
 	return (
-		<div className={styles.filters}>
+		<div className='mt-[5.625rem]'>
 			{FILTERS.map(filter => {
 				const isOpen = openedFilters.includes(filter.id)
 				return <FilterRenderer key={filter.id} filter={filter} isOpen={isOpen} toggle={() => toggleFilter(filter.id)} />
