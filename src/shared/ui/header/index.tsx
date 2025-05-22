@@ -28,9 +28,9 @@ export function Header() {
 						</Link>
 					</li>
 					<li className={styles.navListItem}>
-						<a className={styles.navListLink} href='/#about'>
+						<Link className={styles.navListLink} to={ROUTES.aboutUs}>
 							о нас
-						</a>
+						</Link>
 					</li>
 					<li className={styles.navListItem}>
 						<a className={styles.navListLink} href='/#sales'>

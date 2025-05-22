@@ -1,0 +1,100 @@
+.aboutUsWrapper {
+	padding-top: 9rem;
+}
+
+.wrapper {
+	padding: 4rem 2rem;
+	background-color: var(--background-primary);
+	color: var(--color-primary);
+	font-family: 'Gagalin', sans-serif;
+}
+
+.missionSection {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 3rem;
+	gap: 2rem;
+}
+
+.quoteBlock {
+	background-color: var(--background-secondary);
+	padding: 7.5rem 5rem;
+	border-radius: 1rem;
+	max-width: 850px;
+}
+
+.quote {
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+.image {
+	margin-left: -8rem;
+	transform: scale(1.5);
+}
+
+.subtitle {
+	display: inline-block;
+	text-align: center;
+	font-size: 3rem;
+	margin: 5rem 0 1rem;
+	margin-left: 12%;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 6px solid rgba(255, 255, 255, 0.2);
+	padding: 1rem 5rem;
+	border-radius: 2rem;
+}
+
+.list {
+	list-style: none;
+	font-size: 2rem;
+	padding: 0;
+	margin-top: 3rem;
+	margin-left: 5%;
+}
+
+.listItem {
+	display: flex;
+	align-items: center;
+	max-width: 65%;
+	gap: 3.75rem;
+	margin-top: 4.75rem;
+	line-height: 1.5;
+}
+
+.dot {
+	width: 4.875rem;
+	height: 4.875rem;
+	border-radius: 50%;
+	background-color: var(--background-secondary);
+	flex-shrink: 0;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 85%;
+	margin: 0 auto;
+	font-size: 2rem;
+	margin-top: 14rem;
+	gap: 1rem;
+}
+
+.addressBlock p {
+	margin: 0.5rem 0;
+}
+.addressBlock p:first-child {
+	margin-left: -1rem;
+	margin-bottom: 2rem;
+}
+
+.contacts {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: bold;
+}
