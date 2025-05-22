@@ -23,7 +23,8 @@ export function useRegisterForm() {
 		}
 
 		try {
-			const checkRes = await fetch(`${API_URL}/users?phone=${phone.slice(1)}`)
+			// нужно encodeURIComponent чтобы сохранить знак плюса в номере, иначе URL воспринимает его как пробел
+			const checkRes = await fetch(`${API_URL}/users?phone=${encodeURIComponent(phone as string)}&password=${password}`)
 			const existingUsers = await checkRes.json()
 
 			if (existingUsers.length > 0) {

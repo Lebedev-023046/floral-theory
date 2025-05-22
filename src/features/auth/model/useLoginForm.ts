@@ -17,7 +17,8 @@ export function useLoginForm() {
 		console.log({ phone, password })
 
 		try {
-			const res = await fetch(`${API_URL}/users?phone=${phone.slice(1)}&password=${password}`)
+			// нужно encodeURIComponent чтобы сохранить знак плюса в номере, иначе URL воспринимает его как пробел
+			const res = await fetch(`${API_URL}/users?phone=${encodeURIComponent(phone as string)}&password=${password}`)
 
 			const users = await res.json()
 
