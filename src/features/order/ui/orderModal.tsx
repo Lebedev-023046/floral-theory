@@ -20,11 +20,17 @@ export function OrderModal({ onClose }: OrderModalProps) {
 
 		const entries = Object.fromEntries(formData.entries())
 		console.log('📝 Order Form Values:', entries)
+		onClose()
 	}
 
 	return (
 		<div className='p-8 relative z-[100] flex flex-col justify-center items-center -mt-[54rem]'>
-			<Modal className='pt-4 pb-10' onSubmit={handleSubmit} overlay onClose={onClose}>
+			<Modal
+				className='pt-4 pb-10'
+				onSubmit={handleSubmit}
+				overlay
+				onClose={onClose}
+			>
 				<Input error={errors.name} name='name' label='Имя' />
 				<Input error={errors.phone} name='phone' label='Телефон' />
 				<Input error={errors.address} name='address' label='Адрес доставки' />
